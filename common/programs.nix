@@ -10,5 +10,6 @@
     pulumi
     volta
     bun
+    pciutils
   ];
 }

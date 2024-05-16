@@ -11,12 +11,8 @@
       ./common/tailscale.nix
       ./common/programs.nix
       ./common/docker.nix
+      ./common/alias.nix
     ];
-
-  environment.systemPackages = with pkgs; [
-    
-  ];
-
 
   networking.hostName = lib.mkForce "cecil";
 }
