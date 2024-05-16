@@ -10,6 +10,7 @@
       ./common/tailscale.nix
       ./common/programs.nix
       ./common/docker.nix
+      ./common/docker-nvidia.nix
       ./common/nvidia.nix
       ./common/alias.nix
     ];
