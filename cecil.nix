@@ -7,13 +7,15 @@
 {
   imports =
     [
-      ./gnome.nix
+      ./common/gnome.nix
     ];
 
   environment.systemPackages = with pkgs; [
     git
     gh
     vscode
+    trash-cli
+    lazygit
   ];
 
 }
