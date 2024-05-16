@@ -8,6 +8,7 @@
   imports =
     [
       ./common/gnome.nix
+      ./common/tailscale.nix
     ];
 
   environment.systemPackages = with pkgs; [
