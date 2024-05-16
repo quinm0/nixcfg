@@ -2,23 +2,21 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
     [
       ./common/gnome.nix
       ./common/tailscale.nix
+      ./common/programs.nix
+      ./common/docker.nix
     ];
 
   environment.systemPackages = with pkgs; [
-    git
-    gh
-    vscode
-    trash-cli
-    lazygit
+    
   ];
 
 
-  networking.hostName = "cecil";
+  networking.hostName = lib.mkForce "cecil";
 }
