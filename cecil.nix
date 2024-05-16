@@ -19,4 +19,6 @@
     lazygit
   ];
 
+
+  networking.hostName = "cecil";
 }
