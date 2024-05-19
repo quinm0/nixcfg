@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     git
     gh
-    vscode
     trash-cli
     lazygit
     pulumi
