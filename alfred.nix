@@ -18,4 +18,6 @@
     ];
 
   networking.hostName = lib.mkForce "alfred";
+
+  programs.steam.enable = true;
 }

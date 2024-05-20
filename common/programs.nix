@@ -7,8 +7,10 @@
     trash-cli
     lazygit
     pulumi
-    volta
     bun
     pciutils
+    nodejs_18
+    openssl
   ];
+
 }
