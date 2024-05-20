@@ -10,6 +10,7 @@
       ./common/gnome.nix
       ./common/tailscale.nix
       ./common/programs.nix
+      ./common/guiPrograms.nix
       ./common/docker.nix
       ./common/alias.nix
     ];
