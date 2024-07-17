@@ -19,6 +19,6 @@
     gnome.gnome-terminal
   ];
 
-  services.gnome.core-utilities.enable = false;
+  services.gnome.core-utilities.enable = true;
 
 }
