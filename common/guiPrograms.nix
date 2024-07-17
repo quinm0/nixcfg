@@ -7,6 +7,7 @@
     signal-desktop # Signal messaging app
     chromium # Chrome
     spotify
+    guake
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

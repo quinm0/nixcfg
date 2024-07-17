@@ -11,6 +11,10 @@
     pciutils
     nodejs_18
     openssl
+    htop
+    fish
   ];
+
+  programs.fish.enable = true;
 
 }
