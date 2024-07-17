@@ -6,6 +6,7 @@
     vscode # Visual studio code
     signal-desktop # Signal messaging app
     chromium # Chrome
+    spotify
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
