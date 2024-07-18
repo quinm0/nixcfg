@@ -15,6 +15,8 @@
       ./common/nvidia.nix
       ./common/docker-nvidia.nix
       ./common/alias.nix
+      ./common/yubikey.nix
+      ./common/yubikeyLock.nix
     ];
 
   networking.hostName = lib.mkForce "alfred";

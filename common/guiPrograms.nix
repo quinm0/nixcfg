@@ -8,6 +8,7 @@
     chromium # Chrome
     spotify
     guake
+    prusa-slicer
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
