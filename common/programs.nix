@@ -13,6 +13,7 @@
     openssl
     htop
     fish
+    vim
   ];
 
   programs.fish.enable = true;

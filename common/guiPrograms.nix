@@ -7,9 +7,9 @@
     signal-desktop # Signal messaging app
     chromium # Chrome
     spotify
-    guake
     prusa-slicer
     rpi-imager
+    gparted
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
