@@ -8,7 +8,7 @@ fi
 
 pushd /etc/nixos/ 
 
-hostname=test
+hostname=$(hostname)
 if [ "$hostname" == "nixos" ]; then
   read -p "Enter the current machine's hostname: " hostname
 fi
