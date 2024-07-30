@@ -30,6 +30,6 @@ if [ $? -ne 0 ]; then
   cat /tmp/nixos-switch.log | grep --color error
   exit 1
 fi
-gen=$(nixos-rebuild list-generations | grep current)
+gen=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
 git commit -am "$gen"
 popd
