@@ -31,5 +31,5 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 gen=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
-git commit -am "$gen"
+git commit -am "Generation $gen"
 popd
