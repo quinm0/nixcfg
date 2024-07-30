@@ -14,7 +14,7 @@
       ./common/docker.nix
       ./common/nvidia.nix
       ./common/docker-nvidia.nix
-      ./common/alias.nix
+      #./common/alias.nix
       ./common/yubikey.nix
       ./common/yubikeyLock.nix
       #./common/mdns.nix

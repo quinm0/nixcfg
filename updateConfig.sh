@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-if [[ $EUID -ne 0 ]]; then
-  echo "This script must be run as root" 
-  exit 1
-fi
+# Ensure sudo permissions are obtained at the start
+sudo -v
 
 pushd /etc/nixos/ 
 
@@ -27,11 +25,11 @@ fi
 nano "$nix_file"
 git diff -U0 *.nix
 echo "NixOS Rebuilding..."
-if sudo nixos-rebuild switch &>nixos-switch.log; then
-  echo "Rebuild successful."
-  gen=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
-  git commit -am "Generation $gen"
-else
-  cat nixos-switch.log | grep --color error && false
+sudo nixos-rebuild switch &>/tmp/nixos-switch.log
+if [ $? -ne 0 ]; then
+  cat /tmp/nixos-switch.log | grep --color error
+  exit 1
 fi
+gen=$(nixos-rebuild list-generations | grep current)
+git commit -am "$gen"
 popd
