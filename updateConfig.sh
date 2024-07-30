@@ -27,8 +27,11 @@ fi
 nano "$nix_file"
 git diff -U0 *.nix
 echo "NixOS Rebuilding..."
-sudo nixos-rebuild switch &>nixos-switch.log || (
- cat nixos-switch.log | grep --color error && false)
-gen=$(nixos-rebuild list-generations | grep current)
-git commit -am "$gen"
+if sudo nixos-rebuild switch &>nixos-switch.log; then
+  echo "Rebuild successful."
+  gen=$(nixos-rebuild list-generations | grep current | awk '{print $1}')
+  git commit -am "Generation $gen"
+else
+  cat nixos-switch.log | grep --color error && false
+fi
 popd

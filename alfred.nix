@@ -17,7 +17,7 @@
       ./common/alias.nix
       ./common/yubikey.nix
       ./common/yubikeyLock.nix
-      ./common/mdns.nix
+      #./common/mdns.nix
       ./common/fish.nix
     ];
 
