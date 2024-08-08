@@ -14,6 +14,7 @@
     htop
     fish
     vim
+    psmisc
   ];
 
   programs.fish.enable = true;
