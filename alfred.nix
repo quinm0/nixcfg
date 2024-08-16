@@ -23,5 +23,14 @@
 
   networking.hostName = lib.mkForce "alfred";
 
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+
+  systemd.services."NetworkManager-wait-online".enable = false;
+
   programs.steam.enable = true;
 }
