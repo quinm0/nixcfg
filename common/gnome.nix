@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     gnome.gnome-tweaks
+    gnomeExtensions.dash-to-dock
   ];
 
   services.xserver = {

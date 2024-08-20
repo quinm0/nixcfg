@@ -17,6 +17,6 @@
     psmisc
   ];
 
- # programs.fish.enable = true;
+ programs.fish.enable = false;
 
 }
