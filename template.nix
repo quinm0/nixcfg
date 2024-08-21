@@ -8,7 +8,6 @@
       ./common/docker.nix
       ./common/alias.nix
       ./common/mdns.nix
-      ./common/fish.nix
       # ./common/gnome.nix
       # ./common/guiPrograms.nix
       # ./common/yubikey.nix

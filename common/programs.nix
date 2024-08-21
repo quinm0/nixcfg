@@ -12,11 +12,7 @@
     nodejs_18
     openssl
     htop
-    fish
     vim
     psmisc
   ];
-
- programs.fish.enable = false;
-
 }

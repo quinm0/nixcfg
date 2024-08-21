@@ -18,7 +18,6 @@
       ./common/yubikey.nix
       ./common/yubikeyLock.nix
       ./common/mdns.nix
-      ./common/fish.nix
     ];
 
   networking.hostName = lib.mkForce "alfred";
