@@ -14,6 +14,7 @@
       gparted
       google-chrome
       zen-browser.packages."${system}".default
+      zoom-us
     ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
