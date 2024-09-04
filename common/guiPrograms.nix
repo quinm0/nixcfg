@@ -15,6 +15,8 @@
       google-chrome
       zen-browser.packages."${system}".default
       zoom-us
+      brasero
+      handbrake
     ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
