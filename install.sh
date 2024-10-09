@@ -5,7 +5,7 @@ if [ -d "/etc/nixos/.git" ]; then
   echo "Repository already exists. Skipping cloning."
 else
   echo "Directory is not empty. Performing a forced clone."
-  git clone git@github.com:quinm0/nixcfg.git /tmp/nixcfg
+  git clone https://github.com/quinm0/nixcfg.git /tmp/nixcfg
   mv /tmp/nixcfg/* /etc/nixos/
   mv /tmp/nixcfg/.* /etc/nixos/
   rm -rf /tmp/nixcfg
