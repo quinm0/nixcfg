@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Set permission tracking to false
+git config core.filemode false
+
+# Set permissions for /etc/nixos directory
+chmod -R 775 /etc/nixos
 
 if [ -d "/etc/nixos/.git" ]; then
   echo "Repository already exists. Skipping cloning."
