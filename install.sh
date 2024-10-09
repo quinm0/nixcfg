@@ -1,10 +1,17 @@
 #!/bin/bash
 
+echo "Installing NixOS configuration..."
+echo "allow sudo without password"
+
+sudo ls
+
 # Set permission tracking to false
 git config core.filemode false
 
 # Set permissions for /etc/nixos directory
-chmod -R 775 /etc/nixos
+sudo chmod -R 777 /etc/nixos
+
+
 
 if [ -d "/etc/nixos/.git" ]; then
   echo "Repository already exists. Skipping cloning."
