@@ -8,10 +8,11 @@ sudo ls
 # Set permission tracking to false
 git config core.filemode false
 
+# set group for /etc/nixos directory to be wheel
+sudo chown -R root:wheel /etc/nixos
+
 # Set permissions for /etc/nixos directory
-sudo chmod -R 777 /etc/nixos
-
-
+sudo chmod -R 775 /etc/nixos
 
 if [ -d "/etc/nixos/.git" ]; then
   echo "Repository already exists. Skipping cloning."
@@ -31,3 +32,7 @@ else
   cp /etc/nixos/hosts/template.nix.template "/etc/nixos/hosts/$hostname.nix"
   sed -i "s/\$HOSTNAME/$hostname/g" "/etc/nixos/hosts/$hostname.nix"
 fi
+
+# remove existing configuration.nix and replace with softwlink to the configuration.nix in the hosts directory
+rm /etc/nixos/configuration.nix
+ln -s /etc/nixos/hosts/$hostname.nix /etc/nixos/configuration.nix

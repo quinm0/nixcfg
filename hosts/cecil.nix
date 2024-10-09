@@ -29,6 +29,7 @@
 
   imports =
     [
+      ../hardware-configuration.nix
       # Hardware
       # ../common/nvidia.nix
 
