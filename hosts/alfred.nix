@@ -8,7 +8,6 @@
   networking.hostName = "alfred";
 
   systemd.services."NetworkManager-wait-online".enable = false;
-
   
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -75,6 +74,8 @@
 
   imports =
     [
+      ../common/user/quin-gui.nix
+
       # Functionality
       ../common/gaming.nix
       ../common/gnome.nix
@@ -85,9 +86,6 @@
       ../common/tailscale.nix
       ../common/alias.nix
       ../common/mdns.nix
-
-      ../common/programs.nix
-      ../common/guiPrograms.nix
       
       # Hardware
       ../common/nvidia.nix
