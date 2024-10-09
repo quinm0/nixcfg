@@ -29,24 +29,22 @@
 
   imports =
     [
+      # Hardware
+      ../common/nvidia.nix
+
       # Users
       ../common/user/quin-gui.nix
 
       # Functionality
       ../common/gaming.nix
       ../common/gnome.nix
-      ../common/docker.nix
-      ../common/docker-nvidia.nix
+      ../common/docker-with-nvidia.nix
       ../common/pipewire.nix
 
       # Configuration
       ../common/tailscale.nix
-      ../common/mdns.nix
       ../common/locale.nix
       ../common/services.nix
-      
-      # Hardware
-      ../common/nvidia.nix
 
       # Security
       ../common/yubikey.nix

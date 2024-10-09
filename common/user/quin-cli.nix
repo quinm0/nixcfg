@@ -4,9 +4,11 @@
   users.users.qmoran = {
     isNormalUser = true;
     description = "Quin Moran";
-    extraGroups = [ "networkmanager" "wheel" ];
-
-  
+    extraGroups = [ 
+      "networkmanager" 
+      "wheel" 
+      "docker"
+    ];
 
     packages = with pkgs; [
       # CLI tools
@@ -16,6 +18,7 @@
       lazygit
       bun
       htop
+      ctop
     ];
   };
 }
