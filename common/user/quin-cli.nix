@@ -19,6 +19,9 @@
       bun
       htop
       ctop
+      caligula
+      neofetch
+      zoxide
     ];
   };
 }
