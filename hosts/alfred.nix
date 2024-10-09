@@ -74,6 +74,7 @@
 
   imports =
     [
+      # Users
       ../common/user/quin-gui.nix
 
       # Functionality
