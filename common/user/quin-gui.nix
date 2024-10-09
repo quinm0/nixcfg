@@ -19,6 +19,7 @@
       spotify
       prusa-slicer
       rpi-imager
+      vscode
       gparted
       google-chrome
     ];

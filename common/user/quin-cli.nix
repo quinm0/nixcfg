@@ -5,6 +5,9 @@
     isNormalUser = true;
     description = "Quin Moran";
     extraGroups = [ "networkmanager" "wheel" ];
+
+  
+
     packages = with pkgs; [
       # CLI tools
       git

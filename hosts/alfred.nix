@@ -5,20 +5,16 @@
 { config, pkgs, lib, ... }:
 
 {
-  networking.hostName = "alfred";
-
-  systemd.services."NetworkManager-wait-online".enable = false;
-  
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable networking
+  networking.hostName = "alfred";
   networking.networkmanager.enable = true;
+  systemd.services."NetworkManager-wait-online".enable = false;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -45,9 +41,9 @@
 
       # Configuration
       ../common/tailscale.nix
-      ../common/alias.nix
       ../common/mdns.nix
       ../common/locale.nix
+      ../common/services.nix
       
       # Hardware
       ../common/nvidia.nix
