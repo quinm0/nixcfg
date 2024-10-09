@@ -30,6 +30,7 @@
   imports =
     [
       # Hardware
+      ../hardware-configuration.nix
       ../common/nvidia.nix
 
       # Users
