@@ -10,7 +10,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    nvtop
+    nvtopPackages.full
   ];
 
   # Load nvidia driver for Xorg and Wayland
