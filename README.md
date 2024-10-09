@@ -15,5 +15,6 @@ run with `bash cleanup.sh`
 run this
 
 ```
+nix-shell -p git
 bash <(curl -L https://raw.githubusercontent.com/quinm0/nixcfg/refs/heads/main/install.sh)
 ```
