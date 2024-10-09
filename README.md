@@ -12,9 +12,9 @@ run with `bash cleanup.sh`
 
 ### To set up new host
 
-run this
+1. Install nixos as you normally would.
+2. run this
 
 ```
-nix-shell -p git
-bash <(curl -L https://raw.githubusercontent.com/quinm0/nixcfg/refs/heads/main/install.sh)
+nix-shell -p git --run "bash <(curl -L https://raw.githubusercontent.com/quinm0/nixcfg/refs/heads/main/install.sh)"
 ```
