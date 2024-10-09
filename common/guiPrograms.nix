@@ -17,6 +17,7 @@
       zoom-us
       brasero
       handbrake
+      element-desktop
     ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
