@@ -1,6 +1,11 @@
 { config, pkgs, lib, ... }:
 
 {
+
+  imports = [
+    <nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix>
+  ];
+
   users.users.qmoran = {
     isNormalUser = true;
     description = "Quin Moran";
