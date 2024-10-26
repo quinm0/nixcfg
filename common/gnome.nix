@@ -26,4 +26,12 @@
   ];
 
   services.gnome.core-utilities.enable = true;
+
+  services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+    [org.gnome.settings-daemon.plugins.power]
+      sleep-inactive-ac-timeout=0
+      sleep-inactive-battery-timeout=0
+      sleep-inactive-ac-type='nothing'
+      sleep-inactive-battery-type='nothing'
+  '';
 }

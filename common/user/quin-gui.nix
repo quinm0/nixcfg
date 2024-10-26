@@ -31,6 +31,8 @@
       vscode
       gparted
       google-chrome
+      gimp
+      zoom-us
     ];
   };
 }
