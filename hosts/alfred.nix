@@ -37,16 +37,16 @@
     [
       # Hardware
       ../hardware-configuration.nix
-      ../common/nvidia.nix
+      #../common/nvidia.nix
 
       # Users
-      ../common/user/quin-gui.nix
+      ../common/user/quin-cli.nix
 
       # Functionality
-      ../common/gaming.nix
-      ../common/gnome.nix
-      ../common/docker-with-nvidia.nix
-      ../common/pipewire.nix
+      #../common/gaming.nix
+      #../common/gnome.nix
+      #../common/docker-with-nvidia.nix
+      #../common/pipewire.nix
 
       # Configuration
       ../common/tailscale.nix
@@ -54,7 +54,7 @@
       ../common/services.nix
 
       # Security
-      ../common/yubikey.nix
-      ../common/yubikeyLock.nix
+      #../common/yubikey.nix
+      #../common/yubikeyLock.nix
     ];
 }
